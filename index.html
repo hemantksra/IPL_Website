@@ -120,60 +120,62 @@
         <h2>Book Your Ticket</h2>
 
         <form action="#booking" method="get">
-          <label for="match">Select Match:</label>
-          <select id="match" name="match" required>
-            <option value="">Select Match</option>
-            <option>RCB vs CSK</option>
-            <option>MI vs KKR</option>
-            <option>CSK vs SRH</option>
-          </select>
+          <div class="form-field">
+            <label for="match">Select Match:</label>
+            <select id="match" name="match" required>
+              <option value="">Select Match</option>
+              <option>RCB vs CSK</option>
+              <option>MI vs KKR</option>
+              <option>CSK vs SRH</option>
+            </select>
+          </div>
 
-          <br /><br />
+          <div class="form-field">
+            <label for="stand">Stand Category:</label>
+            <select id="stand" name="stand" required>
+              <option value="">Select Stand</option>
+              <option>General</option>
+              <option>Premium</option>
+              <option>VIP</option>
+            </select>
+          </div>
 
-          <label for="stand">Stand Category:</label>
-          <select id="stand" name="stand" required>
-            <option value="">Select Stand</option>
-            <option>General</option>
-            <option>Premium</option>
-            <option>VIP</option>
-          </select>
+          <div class="form-field">
+            <label for="tickets">Number of Tickets:</label>
+            <input
+              type="number"
+              id="tickets"
+              name="tickets"
+              min="1"
+              max="10"
+              required
+            />
+          </div>
 
-          <br /><br />
+          <div class="form-field">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
 
-          <label for="tickets">Number of Tickets:</label>
-          <input
-            type="number"
-            id="tickets"
-            name="tickets"
-            min="1"
-            max="10"
-            required
-          />
+          <div class="form-field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
 
-          <br /><br />
+          <div class="form-field">
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{10}"
+              required
+            />
+          </div>
 
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <br /><br />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <br /><br />
-
-          <label for="phone">Phone Number:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            pattern="[0-9]{10}"
-            required
-          />
-
-          <br /><br />
-
-          <button type="submit">Confirm Booking</button>
+          <div class="form-actions">
+            <button type="submit">Confirm Booking</button>
+          </div>
         </form>
 
         <aside>
