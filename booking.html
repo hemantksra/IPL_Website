@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL Ticket Booking</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <h1>IPL 2026 Ticket Booking</h1>
+
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="index.html#matches">Matches</a> |
+        <a href="booking.html">Book Ticket</a> |
+        <a href="index.html#mybookings">My Bookings</a>
+      </nav>
+    </header>
+
+    <main class="booking-main">
+      <section class="booking-page">
+        <h2>Book Your IPL Tickets</h2>
+        <p>Fill in the details below to book your favourite match.</p>
+
+        <form action="#" method="get">
+          <!-- Name -->
+          <div class="form-field">
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              minlength="2"
+              maxlength="50"
+              required
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="form-field">
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              maxlength="254"
+              required
+            />
+          </div>
+
+          <!-- Phone Number -->
+          <div class="form-field">
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter 10-digit number"
+              pattern="[0-9]{10}"
+              minlength="10"
+              maxlength="10"
+              title="Enter a valid 10-digit phone number"
+              required
+            />
+          </div>
+
+          <!-- Match Selection -->
+          <div class="form-field">
+            <label for="match">Select Match:</label>
+            <select id="match" name="match" required>
+              <option value="">-- Select Match --</option>
+              <option value="RCB vs CSK">RCB vs CSK</option>
+              <option value="MI vs KKR">MI vs KKR</option>
+              <option value="CSK vs SRH">CSK vs SRH</option>
+            </select>
+          </div>
+
+          <!-- Stand Category -->
+          <div class="form-field">
+            <label for="stand">Stand Category:</label>
+            <select id="stand" name="stand" required>
+              <option value="">-- Select Stand --</option>
+              <option value="General">General</option>
+              <option value="Premium">Premium</option>
+              <option value="VIP">VIP</option>
+            </select>
+          </div>
+
+          <!-- Number of Tickets -->
+          <div class="form-field">
+            <label for="tickets">Number of Tickets:</label>
+            <input
+              type="number"
+              id="tickets"
+              name="tickets"
+              min="1"
+              max="10"
+              required
+            />
+          </div>
+
+          <!-- Additional Preference -->
+          <fieldset class="form-preferences">
+            <legend>Ticket Delivery Preference</legend>
+
+            <label class="choice-label">
+              <input type="radio" name="delivery" value="E-ticket" checked />
+              E-ticket
+            </label>
+
+            <label class="choice-label">
+              <input type="radio" name="delivery" value="Venue Collection" />
+              Collect at Venue
+            </label>
+          </fieldset>
+
+          <!-- Terms and Conditions -->
+          <div class="form-field terms-field">
+            <label class="choice-label" for="terms">
+              <input type="checkbox" id="terms" name="terms" required />
+              I confirm that the information provided is correct.
+            </label>
+          </div>
+
+          <!-- Buttons -->
+          <div class="form-actions">
+            <button type="submit">Submit Booking</button>
+            <button type="reset" class="reset-button">Reset Form</button>
+          </div>
+        </form>
+
+        <p class="form-note">
+          Please verify your details before submitting. All mandatory fields
+          must be completed.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 IPL Ticket Booking. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
